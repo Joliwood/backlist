@@ -2,7 +2,6 @@
 // import "./reset.css";
 // import App from "./src/App";
 const express = require("express");
-// const header = require("./views/header.ejs");
 
 const server = express();
 server.set("view engine", "ejs");
