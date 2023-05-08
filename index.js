@@ -1,5 +1,3 @@
-// import "./index.css";
-// import "./reset.css";
 // import App from "./src/App";
 const express = require("express");
 
