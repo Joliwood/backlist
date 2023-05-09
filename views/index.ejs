@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="stylesheets/style.css"></link>
     <style></style>
   </head>
-  <body>
-    <%- include("partials/header") %> Bienvenu à l'accueil du site Le body est ici
+  <body class="dark:bg-gray-900 flex flex-col min-h-screen">
+    <%- include("partials/header") %>
+    <div class="flex grow justify-center content-center	">
+      <%- include("partials/form") %>
+      <%- include("partials/todoList") %>
+    </div>
+    <%- include("partials/footer") %>
   </body>
 </html>
