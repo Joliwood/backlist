@@ -3,11 +3,11 @@
     <div
       class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
     >
-      <a href="https://flowbite.com" class="flex items-center w-40">
+      <a href="/" class="flex items-center w-40">
         <img
           src="img/backListLogo.png"
           class="mr-3 h-6 sm:h-9"
-          alt="Flowbite Logo"
+          alt="Backlist Logo"
         />
         <span
           class="self-center text-xl font-semibold whitespace-nowrap text-primary-special"
@@ -85,7 +85,7 @@
           <li>
             <a
               href="/"
-              class="block py-2 pr-4 pl-3 text-primary-special rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0"
+              class="block py-2 pr-4 pl-3 <%- req.path == "/" ? "text-primary-special" : "text-primary-dark" %>  rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 lg:hover:text-primary-special"
               aria-current="page"
             >
               Home
@@ -94,7 +94,7 @@
           <li>
             <a
               href="/details"
-              class="block py-2 pr-4 pl-3 text-primary-dark border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-special lg:p-0"
+              class="block py-2 pr-4 pl-3 <%- req.path == "/details" ? "text-primary-special" : "text-primary-dark" %> border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-special lg:p-0"
             >
               To-do list
             </a>

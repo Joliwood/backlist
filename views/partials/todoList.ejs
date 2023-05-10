@@ -22,11 +22,15 @@
       <h4 class="font-semibold ml-3 text-lg">Votre to-do list</h4>
     </div>
 
-    <ul>
+    <ul class="flex gap-3 flex-col">
       <% tasks.forEach((task, index) => { %>
 
       <div id="<%= index %>">
-        <form method="post" action="/delete/">
+        <form
+          method="post"
+          action="/delete/"
+          class="relative border border-primary-semiLight border-1 rounded-md"
+        >
           <input
             class="hidden"
             type="checkbox"
@@ -34,10 +38,7 @@
             value="<%= index %>"
             checked
           />
-          <label
-            class="flex items-center h-10 px-2 rounded cursor-pointer hover:bg-gray-900"
-            for="task_6"
-          >
+          <label class="flex items-center h-10 px-2 rounded" for="task_6">
             <span
               class="flex items-center justify-center w-5 h-5 text-transparent border-2 border-gray-500 rounded-full"
             >
@@ -54,8 +55,10 @@
                 />
               </svg>
             </span>
-            <span class="ml-4 text-sm"><%= task %></span>
-            <button type="submit">❌</button>
+            <span class="ml-4 text-sm"
+              ><%= task.number %> - IP : <%= task.ip %></span
+            >
+            <button class="absolute right-5" type="submit">❌</button>
           </label>
         </form>
       </div>
@@ -65,7 +68,6 @@
 
     <a
       href="/details"
-      target="blank"
       class="flex gap-5 items-center w-fit h-full py-2 pl-3 pr-5 mt-5 text-sm font-medium rounded bg-primary-special text-primary-dark hover:text-primary-light focus:ring-4 focus:ring-primary-semiLight focus:cursor-pointer"
     >
       <svg

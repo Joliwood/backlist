@@ -7,27 +7,34 @@ server.use(express.static("public"));
 //Permet de récupérer les valeurs des requêtes POST
 server.use(express.urlencoded({ extended: true }));
 
-const tasks = [1, 2, 5, 12];
+const tasks = require("./tasks.json");
+
+server.get("/generate-error", (req, res, next) => {
+  const error = new Error("Custom Error");
+  error.status = 500;
+  next(error);
+});
 
 server.get("/", (req, res) => {
-  res.render("index", { tasks });
+  res.render("index", { tasks, req });
 });
 
 server.get("/details", (req, res) => {
-  res.render("details", { tasks });
+  res.render("details", { tasks, req });
 });
 
 server.post("/delete", function (req, res) {
   const taskId = req.body.id;
-  console.log(taskId);
   tasks.splice(taskId, 1);
   res.redirect("/");
 });
 
 server.post("/", (req, res) => {
-  const number = req.body.number;
-  const description = req.body.description;
-  tasks.push(number);
+  const newTask = {
+    number: req.body.number,
+    ip: req.ip,
+  };
+  tasks.push(newTask);
   res.redirect("/");
 });
 
