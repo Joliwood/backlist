@@ -9,12 +9,6 @@ server.use(express.urlencoded({ extended: true }));
 
 const tasks = require("./tasks.json");
 
-server.get("/generate-error", (req, res, next) => {
-  const error = new Error("Custom Error");
-  error.status = 500;
-  next(error);
-});
-
 server.get("/", (req, res) => {
   res.render("index", { tasks, req });
 });
@@ -26,7 +20,7 @@ server.get("/details", (req, res) => {
 server.post("/delete", function (req, res) {
   const taskId = req.body.id;
   tasks.splice(taskId, 1);
-  res.redirect("/");
+  res.redirect("back");
 });
 
 server.post("/", (req, res) => {
