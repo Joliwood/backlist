@@ -539,10 +539,6 @@ video {
   margin-left: 1rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -1041,6 +1037,11 @@ video {
 .hover\:bg-primary-dark:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(48 59 74 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-primary-special:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 188 104 / var(--tw-bg-opacity));
 }
 
 .hover\:text-primary-light:hover {

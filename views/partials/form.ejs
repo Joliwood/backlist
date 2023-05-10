@@ -12,9 +12,9 @@
       <strong class="text-primary-dark">tailwindcss</strong>
       components.
     </p>
-    <form action="#" class="space-y-8">
+    <form action="#" class="space-y-8" method="post">
       <div>
-        <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+        <label for="number" class="block mb-2 text-sm font-medium text-gray-900"
           >Votre numéro favori</label
         >
         <input
@@ -22,10 +22,11 @@
           id="number"
           class="shadow-sm bg-primary-light border border-primary-semiLight text-gray-900 text-sm rounded-lg focus:ring-primary-special focus:border-primary-special block w-full p-2.5 outline-none focus:outline-primary-special outline-offset-0 outline-1"
           placeholder="Entrez votre numéro favori"
+          name="number"
           required
         />
       </div>
-      <div>
+      <!-- <div>
         <label
           for="subject"
           class="block mb-2 text-sm font-medium text-gray-900"
@@ -36,12 +37,14 @@
           id="description"
           class="block p-3 w-full text-sm text-gray-900 bg-primary-light rounded-lg border border-primary-semiLight shadow-sm focus:ring-primary-special focus:border-primary-special outline-none focus:outline-primary-special outline-offset-0 outline-1"
           placeholder="Tire de la tâche à enregistrer"
+          name="description"
           required
         />
-      </div>
+      </div> -->
       <button
         type="submit"
         class="py-3 px-5 text-sm font-medium text-center text-primary-dark rounded-lg bg-primary-special sm:w-fit focus:ring-4 focus:outline-none hover:text-primary-light"
+        value="Envoyer"
       >
         Send message
       </button>
