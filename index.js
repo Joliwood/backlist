@@ -13,7 +13,10 @@ server.get("/", (req, res) => {
   res.render("index", { tasks });
 });
 
-// The completed task array with initial placeholders for removed task
+server.get("/details", (req, res) => {
+  res.render("details", { tasks });
+});
+
 server.post("/delete", function (req, res) {
   const taskId = req.body.id;
   console.log(taskId);
