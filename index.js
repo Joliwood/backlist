@@ -1,36 +1,18 @@
 const express = require("express");
+const path = require("path");
 
 const server = express();
+const viewsDirectory = path.join(__dirname, "app/views");
 server.set("view engine", "ejs");
+server.set("views", viewsDirectory);
 server.use(express.static("public"));
 
 //Permet de récupérer les valeurs des requêtes POST
 server.use(express.urlencoded({ extended: true }));
 
-const tasks = require("./tasks.json");
+const router = require("./app/router");
 
-server.get("/", (req, res) => {
-  res.render("index", { tasks, req });
-});
-
-server.get("/details", (req, res) => {
-  res.render("details", { tasks, req });
-});
-
-server.post("/delete", function (req, res) {
-  const taskId = req.body.id;
-  tasks.splice(taskId, 1);
-  res.redirect("back");
-});
-
-server.post("/", (req, res) => {
-  const newTask = {
-    number: req.body.number,
-    ip: req.ip,
-  };
-  tasks.push(newTask);
-  res.redirect("/");
-});
+server.use(router);
 
 server.use((req, res, next) => res.status(404).render("404"));
 

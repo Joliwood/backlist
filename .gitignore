@@ -8,6 +8,8 @@
 # testing
 /coverage
 .env
+./docs
+create_todo.sql
 
 # production
 /build
