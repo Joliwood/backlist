@@ -16,7 +16,8 @@
   },
   "scripts": {
     "build:css": "postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
