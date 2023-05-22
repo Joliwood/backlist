@@ -668,6 +668,12 @@ video {
   cursor: pointer;
 }
 
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1038,6 +1044,15 @@ video {
 }
 
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
+.hover\:border-primary-semiLight:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(167 169 190 / var(--tw-border-opacity));
+}
 
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;

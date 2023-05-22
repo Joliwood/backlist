@@ -31,6 +31,9 @@ server.use(router);
 
 server.use((req, res, next) => res.status(404).render("404"));
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
+const BASE_URL = process.env.BASE_URL;
 
-server.listen(port);
+server.listen(PORT, () => {
+  console.log(`Listening on http://${BASE_URL}:${PORT}`);
+});

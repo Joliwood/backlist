@@ -25,10 +25,8 @@
     <ul class="flex gap-3 flex-col">
       <% tasks.forEach((task, index) => { %>
 
-      <div id="<%= index %>">
-        <form
-          method="post"
-          action="/delete/"
+      <div id="<%= index %>" class="select-none">
+        <div
           class="relative border border-primary-semiLight border-1 rounded-md"
         >
           <input
@@ -39,28 +37,35 @@
             checked
           />
           <label class="flex items-center h-10 px-2 rounded" for="task_6">
-            <span
-              class="flex items-center justify-center w-5 h-5 text-transparent border-2 border-gray-500 rounded-full"
-            >
-              <svg
-                class="w-4 h-4 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+            <form method="post" action="/complete/">
+              <Button
+                class="flex items-center justify-center w-5 h-5 text-transparent border-2 border-gray-500 rounded-full hover:cursor-pointer hover:border-primary-semiLight svgChanger <%= task.completed ? "text-white" : "" %>"
+                type="submit"
+                name="listToComplete"
+                value="<%= index %>"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </span>
+                <svg
+                  class="w-4 h-4 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </Button>
+            </form>
             <span class="ml-4 text-sm"
               ><%= task.number %> - IP : <%= task.ip %></span
             >
-            <button class="absolute right-5" type="submit">❌</button>
+            <form method="post" action="/delete/" class="flex items-center">
+              <button class="absolute right-5" type="submit">❌</button>
+            </form>
           </label>
-        </form>
+        </div>
       </div>
 
       <% }); %>
@@ -85,3 +90,13 @@
     </a>
   </div>
 </div>
+
+<script>
+  const svgElements = document.querySelectorAll(".svgChanger");
+
+  svgElements.forEach((svgElement) => {
+    svgElement.addEventListener("click", function () {
+      svgElement.classList.toggle("text-white");
+    });
+  });
+</script>

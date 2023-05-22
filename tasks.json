@@ -1,14 +1,17 @@
 [
   {
     "number": "1",
-    "ip": "unknown"
+    "ip": "unknown",
+    "completed": false
   },
   {
     "number": "12",
-    "ip": "unknown"
+    "ip": "unknown",
+    "completed": true
   },
   {
     "number": "24",
-    "ip": "unknown"
+    "ip": "unknown",
+    "completed": false
   }
 ]
