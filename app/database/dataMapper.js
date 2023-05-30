@@ -1,11 +1,11 @@
-// const client = require("./connexion");
+const client = require("./connexion");
 
-// const dataMapper = {
-//   async getDb() {
-//     const query = "SELECT * FROM figurine";
-//     const results = await client.query(query);
-//     return results.rows;
-//   },
-// };
+const dataMapper = {
+  async getAllData() {
+    const query = `SELECT * FROM items`;
+    const result = await client.query(query);
+    return result.rows;
+  },
+};
 
-// module.exports = dataMapper;
+module.exports = dataMapper;
