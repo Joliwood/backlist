@@ -1,5 +1,4 @@
 const tasks = require("../../tasks.json");
-const dataMapper = require("../database/dataMapper");
 
 const homeController = {
   async homePage(req, res) {
@@ -10,12 +9,7 @@ const homeController = {
       });
     }
 
-    const itemsList = await dataMapper.getAllData();
-    console.log(itemsList);
-
-    // const todoList = req.session.bookmarks;
-
-    res.render("../views/index", { tasks, req, itemsList });
+    res.render("../views/index", { tasks, req });
   },
 
   taskUpdate(req, res) {

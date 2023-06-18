@@ -1,15 +1,15 @@
-# Welcome to Backlist !
+# <p align="center">Welcome to Backlist
 
-## Context
+## <p align="center">Context
 
-This is a to-do list created with node.js, express, EJS and tailwindcss. Hosted by render.com
+<p align="center">This is a to-do list created with node.js, express, EJS and tailwindcss. Hosted by render.com
 
-## What is it for ?
+## <p align="center">What is it for ?
 
-This project uses Express, views, ejs, middlewares, get and post. All of that with dynamics html element, with ejs.
+<p align="center">This project uses Express, views, ejs, get and post. All of that with dynamics html element, with ejs. The list is initialized in a json file and every you modift the list, it update the json and also an express session which stay for 1 hour. You also can complete each task.
 
 <br />
 <hr>
 <br />
 
-<a href="https://backlist.onrender.com/" target="blank">Link to the project</a>
+<p align="center"><a href="https://backlist.onrender.com/" target="_blank">Link to the project</a>
