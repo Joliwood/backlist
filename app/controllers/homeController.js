@@ -15,7 +15,11 @@ const homeController = {
   taskUpdate(req, res) {
     const newTask = {
       number: req.body.number,
-      ip: req.ip,
+      created_at: new Date().toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      }),
       completed: false,
     };
     tasks.push(newTask);
