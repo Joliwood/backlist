@@ -1,7 +1,7 @@
 # <p align="center">Welcome to Backlist
 
 <br />
-<p align=center ><img src="https://github.com/Joliwood/todo-list-back/blob/docs/backlist.gif" /></p>
+<p align=center ><img src="https://github.com/Joliwood/todo-list-back/blob/main/docs/backlist.gif?raw=true" /></p>
 <br />
 
 ## <p align="center">Context
