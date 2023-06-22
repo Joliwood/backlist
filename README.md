@@ -1,5 +1,9 @@
 # <p align="center">Welcome to Backlist
 
+<br />
+<p align=center ><img src="https://github.com/Joliwood/todo-list-back/blob/docs/backlist.gif" /></p>
+<br />
+
 ## <p align="center">Context
 
 <p align="center">This is a to-do list created with node.js, express, EJS and tailwindcss. Hosted by render.com
