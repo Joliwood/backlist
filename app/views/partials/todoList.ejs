@@ -1,5 +1,5 @@
 <div
-  class="flex flex-grow items-center p-12 justify-center bg-primary-special2 w-full lg:w-1/2"
+  class="flex flex-grow items-center p-6 lg:p-12 justify-center bg-primary-special2 w-full lg:w-1/2"
 >
   <div
     class="max-w-full p-8 bg-primary-dark rounded-lg shadow-lg w-96 text-primary-semiLight"
@@ -36,7 +36,7 @@
             value="<%= index %>"
             checked
           />
-          <label class="flex items-center h-10 px-2 rounded" for="task_6">
+          <label class="flex items-center min-h-[2.5rem] h-fit px-2 rounded" for="task_6">
             <form method="post" action="/complete/">
               <Button
                 class="flex items-center justify-center w-5 h-5 text-transparent border-2 border-gray-500 rounded-full hover:cursor-pointer hover:border-primary-semiLight svgChanger <%= task.completed ? "text-white" : "" %>"
@@ -62,7 +62,8 @@
               ><%= task.number %> - Created at : <%= task.created_at %></span
             >
             <form method="post" action="/delete/" class="flex items-center">
-              <button class="absolute right-5" type="submit">❌</button>
+              <button class="absolute right-2" type="submit" name="id"
+              value="<%= index %>">❌</button>
             </form>
           </label>
         </div>
