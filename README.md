@@ -12,6 +12,14 @@
 
 <p align="center">This project uses Express, views, ejs, get and post. All of that with dynamics html element, with ejs. The list is initialized in a json file and every you modift the list, it update the json and also an express session which stay for 1 hour. You also can complete each task.
 
+## <p align="center">How to read commits in this project
+
+<p align="center">:zap: = Minor correction / debug
+<p align="center">:construction: = Work in progress
+<p align="center">:hammer: = New functionnality / component
+<p align="center">:memo: = Readme / Code comments / 
+<p align="center">:sparkles: = Clean code
+
 <br />
 <hr>
 <br />
